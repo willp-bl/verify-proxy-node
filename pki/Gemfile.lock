@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:alphagov/verify-metadata-generator
+  remote: https://github.com/alphagov/verify-metadata-generator.git
   revision: 57d054bc485325a2e696294582c0b4e32d343351
   specs:
     verify-metadata-generator (0.0.2)

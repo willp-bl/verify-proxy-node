@@ -99,3 +99,21 @@ services:
     image: postgres
     expose:
       - "5432"
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+        - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+        - "9090:9090"
+    expose:
+        - "9090"
+
+  grafana:
+    image: grafana/grafana:latest
+    volumes:
+        - ./prometheus/grafana/datasources/prometheus.yml:/etc/grafana/provisioning/datasources/prometheus.yml
+    ports:
+        - "3000:3000"
+    expose:
+        - "3000"

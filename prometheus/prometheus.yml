@@ -1,0 +1,16 @@
+scrape_configs:
+  - job_name: proxy-node-gateway
+    metrics_path: /prometheus/metrics
+    static_configs:
+    - targets:
+      - proxy-node-gateway:6601
+  - job_name: proxy-node-translator
+    metrics_path: /prometheus/metrics
+    static_configs:
+    - targets:
+      - proxy-node-translator:6661
+  - job_name: stub-connector
+    metrics_path: /prometheus/metrics
+    static_configs:
+    - targets:
+      - stub-connector:6667
